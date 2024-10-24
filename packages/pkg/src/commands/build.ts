@@ -1,5 +1,6 @@
 import fse from 'fs-extra';
 import { RollupOptions } from 'rollup';
+
 import { getBuildTasks } from '../helpers/getBuildTasks.js';
 import { getRollupOptions } from '../helpers/getRollupOptions.js';
 import { buildBundleTasks } from '../tasks/bundle.js';
@@ -38,6 +39,9 @@ export default async function build(context: Context) {
       return modes.map((mode) => {
         const taskRunnerContext: TaskRunnerContext = { mode, buildTask };
         const rollupOptions = getRollupOptions(context, taskRunnerContext);
+
+        console.log('--- transformTasks rollupOptions ---', rollupOptions);
+
         return [rollupOptions, taskRunnerContext] as [RollupOptions, TaskRunnerContext];
       });
     })
@@ -57,6 +61,9 @@ export default async function build(context: Context) {
 
   try {
     const outputResults: OutputResult[] = [];
+
+    console.log('--- transformOptions ---', transformOptions);
+
     const { outputResults: transformOutputResults } = await buildTransformTasks(
       transformOptions,
       context,

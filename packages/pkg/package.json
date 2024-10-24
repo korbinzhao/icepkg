@@ -1,6 +1,6 @@
 {
   "name": "wtt-pkg",
-  "version": "1.6.0-beta.1",
+  "version": "1.6.0-beta.2",
   "description": "A fast builder for React components, Node modules and web libraries.",
   "type": "module",
   "main": "./lib/index.js",

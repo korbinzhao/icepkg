@@ -102,6 +102,7 @@ RollupPluginContext,
 
 export let parser = acorn.Parser;
 
+// READ: Transform 容器
 export async function createPluginContainer(
   { plugins, logger, root, output, build: { rollupOptions } },
   moduleGraph?: any,

@@ -1,0 +1,8 @@
+{
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+   // The path quotes
+   "importSorter.importStringConfiguration.quoteMark": "single",
+   // Left number of spaces for the new lined imports. If tabType is set to 'tab', then the configuration defines the size of the tab in number of spaces
+  "importSorter.importStringConfiguration.tabSize": 2,
+  "importSorter.importStringConfiguration.trailingComma": "multiLine",
+}

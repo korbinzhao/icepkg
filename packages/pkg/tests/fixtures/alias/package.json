@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "@ice/pkg": "workspace:*"
+    "wtt-pkg": "workspace:*"
   }
 }

@@ -76,7 +76,7 @@
   "devDependencies": {
     "@algolia/client-search": "^4.9.1",
     "@types/react": "^17.0.0",
-    "@ice/pkg": "^1.5.12",
+    "wtt-pkg": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "catalog:",

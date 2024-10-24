@@ -41,7 +41,7 @@
     "babel-runtime-jsx-plus": "^0.1.5"
   },
   "devDependencies": {
-    "@ice/pkg": "workspace:*",
+    "wtt-pkg": "workspace:*",
     "@ice/pkg-plugin-docusaurus": "workspace:*",
     "@ice/pkg-plugin-jsx-plus": "workspace:*",
     "@ice/remark-react-docgen-docusaurus": "workspace:*",

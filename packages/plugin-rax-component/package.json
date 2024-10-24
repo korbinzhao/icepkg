@@ -30,7 +30,7 @@
     "rax-compat": "^0.1.5"
   },
   "devDependencies": {
-    "@ice/pkg": "^1.5.5",
+    "wtt-pkg": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "catalog:"

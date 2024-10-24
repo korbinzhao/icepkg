@@ -1,7 +1,19 @@
 
+import * as acorn from 'acorn';
 import consola from 'consola';
 import fs from 'fs-extra';
-import { resolve, join, isAbsolute } from 'path';
+import MagicString from 'magic-string';
+import { isAbsolute, join, resolve } from 'path';
+import { performance } from 'perf_hooks';
+import colors from 'picocolors';
+import { SourceMapConsumer } from 'source-map';
+
+import {
+  combineSourcemaps, createDebugger, ensureWatchedFile, generateCodeFrame, isExternalUrl, isObject,
+  normalizePath, numberToPos, require, safeRequire, timeFrom,
+} from '../utils.js';
+import { createLogger } from './logger.js';
+
 import type {
   InputOptions,
   MinimalPluginContext,
@@ -19,28 +31,8 @@ import type {
   TransformResult,
   Plugin,
 } from 'rollup';
-import * as acorn from 'acorn';
-import {
-  combineSourcemaps,
-  ensureWatchedFile,
-  generateCodeFrame,
-  isObject,
-  isExternalUrl,
-  normalizePath,
-  numberToPos,
-  timeFrom,
-  createDebugger,
-  safeRequire,
-  require,
-} from '../utils.js';
-import MagicString from 'magic-string';
 import type { FSWatcher } from 'chokidar';
-import colors from 'picocolors';
-import { performance } from 'perf_hooks';
-import { SourceMapConsumer } from 'source-map';
 import type * as postcss from 'postcss';
-import { createLogger } from './logger.js';
-
 export const FS_PREFIX = '/@fs/';
 
 interface SourceMapV3 {
@@ -400,6 +392,7 @@ export async function createPluginContainer(
 
     // Be consistent of rollup https://github.com/rollup/rollup/blob/master/src/utils/pluginUtils.ts#L7
     if (!(err instanceof Error)) {
+      // @ts-ignore
       err = Object.assign(new Error(err.message), err);
     }
 

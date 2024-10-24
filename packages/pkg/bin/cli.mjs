@@ -9,7 +9,7 @@ import pkgService, { getBuiltInPlugins } from '../lib/index.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const cli = cac('ice-pkg');
+const cli = cac('wtt-pkg');
 
 (async () => {
   cli

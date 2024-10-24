@@ -105,12 +105,12 @@ importers:
 
   examples/plugin:
     devDependencies:
-      '@ice/pkg':
-        specifier: workspace:*
-        version: link:../../packages/pkg
       typescript:
         specifier: 'catalog:'
         version: 4.9.5
+      wtt-pkg:
+        specifier: workspace:*
+        version: link:../../packages/pkg
 
   examples/rax-component:
     dependencies:
@@ -136,9 +136,6 @@ importers:
       '@babel/preset-typescript':
         specifier: ^7.18.6
         version: 7.25.9(@babel/core@7.25.9)
-      '@ice/pkg':
-        specifier: workspace:*
-        version: link:../../packages/pkg
       '@ice/pkg-plugin-docusaurus':
         specifier: workspace:*
         version: link:../../packages/plugin-docusaurus
@@ -181,6 +178,9 @@ importers:
       react-dom:
         specifier: ^18.0.0
         version: 18.3.1(react@18.3.1)
+      wtt-pkg:
+        specifier: workspace:*
+        version: link:../../packages/pkg
 
   examples/react-component:
     dependencies:
@@ -194,9 +194,6 @@ importers:
         specifier: ^0.1.5
         version: 0.1.5
     devDependencies:
-      '@ice/pkg':
-        specifier: workspace:*
-        version: link:../../packages/pkg
       '@ice/pkg-plugin-docusaurus':
         specifier: workspace:*
         version: link:../../packages/plugin-docusaurus
@@ -257,6 +254,9 @@ importers:
       vitest:
         specifier: 'catalog:'
         version: 0.28.5(jsdom@21.1.2)(less@4.2.0)(sass@1.80.4)(sugarss@2.0.0)(terser@5.36.0)
+      wtt-pkg:
+        specifier: workspace:*
+        version: link:../../packages/pkg
 
   examples/react-multi-components:
     dependencies:
@@ -267,9 +267,6 @@ importers:
         specifier: ^0.5.1
         version: 0.5.13
     devDependencies:
-      '@ice/pkg':
-        specifier: workspace:*
-        version: link:../../packages/pkg
       '@ice/pkg-plugin-docusaurus':
         specifier: workspace:*
         version: link:../../packages/plugin-docusaurus
@@ -291,6 +288,9 @@ importers:
       style-unit:
         specifier: ^3.0.4
         version: 3.0.5
+      wtt-pkg:
+        specifier: workspace:*
+        version: link:../../packages/pkg
 
   packages/create-pkg:
     dependencies:
@@ -501,22 +501,22 @@ importers:
 
   packages/pkg/tests/fixtures/alias:
     dependencies:
-      '@ice/pkg':
+      wtt-pkg:
         specifier: workspace:*
         version: link:../../..
 
   packages/pkg/tests/fixtures/bundle-browser:
     dependencies:
-      '@ice/pkg':
-        specifier: workspace:*
-        version: link:../../..
       '@ice/pkg-tests-fixtures-mock-entry-package':
         specifier: workspace:*
         version: link:../mock-entry-package
+      wtt-pkg:
+        specifier: workspace:*
+        version: link:../../..
 
   packages/pkg/tests/fixtures/default:
     dependencies:
-      '@ice/pkg':
+      wtt-pkg:
         specifier: workspace:*
         version: link:../../..
 
@@ -612,9 +612,6 @@ importers:
       '@algolia/client-search':
         specifier: ^4.9.1
         version: 4.24.0
-      '@ice/pkg':
-        specifier: workspace:*
-        version: link:../pkg
       '@types/react':
         specifier: ^17.0.0
         version: 17.0.83
@@ -630,6 +627,9 @@ importers:
       webpack:
         specifier: ^5.76.3
         version: 5.95.0(@swc/core@1.3.80(@swc/helpers@0.5.13))
+      wtt-pkg:
+        specifier: workspace:*
+        version: link:../pkg
 
   packages/plugin-jsx-plus:
     dependencies:
@@ -655,7 +655,7 @@ importers:
         specifier: ^0.1.5
         version: 0.1.5
     devDependencies:
-      '@ice/pkg':
+      wtt-pkg:
         specifier: workspace:*
         version: link:../pkg
 
@@ -665,9 +665,6 @@ importers:
         specifier: ^0.1.5
         version: 0.1.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
-      '@ice/pkg':
-        specifier: workspace:*
-        version: link:../pkg
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -677,6 +674,9 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 4.9.5
+      wtt-pkg:
+        specifier: workspace:*
+        version: link:../pkg
 
   packages/remark-react-docgen-docusaurus:
     dependencies:
@@ -714,15 +714,15 @@ importers:
         specifier: ^2.0.3
         version: 2.0.3
     devDependencies:
-      '@ice/pkg':
-        specifier: workspace:*
-        version: link:../pkg
       '@types/unist':
         specifier: ^2.0.6
         version: 2.0.11
       vfile:
         specifier: ^4.0.0
         version: 4.2.1
+      wtt-pkg:
+        specifier: workspace:*
+        version: link:../pkg
 
   website:
     dependencies:

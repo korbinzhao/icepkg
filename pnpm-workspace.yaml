@@ -1,5 +1,5 @@
 packages:
-  - packages/*
+  - packages/pkg
   - examples/*
   - website
   - packages/pkg/tests/fixtures/*
